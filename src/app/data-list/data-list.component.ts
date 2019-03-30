@@ -20,13 +20,12 @@ export class DataListComponent implements OnInit {
   ngOnInit() {
     const httpOptions = {
       headers: new HttpHeaders({
-        'Cache-Control': 'max-age=0',
+        'Cache-Control': 'no-cache',
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Headers': '*',
       })
     };
-
     this.http.get('https://netasses.azurewebsites.net/api/asset?from=1&to=100', httpOptions)
       .subscribe((data: any[]) => {
         this.datas = data;
