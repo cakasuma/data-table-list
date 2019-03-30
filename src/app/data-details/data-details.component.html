@@ -1,19 +1,27 @@
-<div class="container mt-4 mb-4">
-  <h1>Data list</h1>
+<div class="container mb-4 mt-4">
+  <h1>Data Details</h1>
   
   <table class="table table-hover" cellspacing="0">
     <thead>
       <tr>
+        <th>Id</th>
         <th>File Name</th>
         <th>Mime Type</th>
         <th>Created By</th>
+        <th>Email</th>
+        <th>Country</th>
+        <th>Description</th>
       </tr>
     </thead>
     <tbody>
-      <tr routerLink="/details/{{data.Id}}" *ngFor="let data of datas">
+      <tr *ngIf="data">
+        <td>{{data.Id}}</td>
         <td>{{data.FileName}}</td>
         <td>{{data.MimeType}}</td>
         <td>{{data.CreatedBy}}</td>
+        <td>{{data.Email}}</td>
+        <td>{{data.Country}}</td>
+        <td>{{data.Description}}</td>
       </tr>
     </tbody>
   </table>
