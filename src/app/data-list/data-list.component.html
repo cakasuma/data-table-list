@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Data list</h1>
+  
+  <table class="table table-hover" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>File Name</th>
+        <th>Mime Type</th>
+        <th>Created By</th>
+        <th>Email</th>
+        <th>Country</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of datas">
+        <td>{{data.Id}}</td>
+        <td>{{data.FileName}}</td>
+        <td>{{data.MimeType}}</td>
+        <td>{{data.CreatedBy}}</td>
+        <td>{{data.Email}}</td>
+        <td>{{data.Country}}</td>
+        <td>{{data.Description}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
